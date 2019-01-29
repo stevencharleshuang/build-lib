@@ -6,24 +6,27 @@
   };
 
   // Hidden within the scope of the IIFE and never directly accessible
-  let supportedLangs = ['en', 'es'];
+  let supportedLangs = ['en', 'es', 'fr'];
 
   // Informal Greeting
   let greetings = {
     en: 'Hello',
-    es: 'Hola'
+    es: 'Hola',
+    fr: 'Salut'
   };
 
   // Formal Greeting
   let formalGreetings = {
     en: 'Greetings', 
-    es: 'Saludos'
+    es: 'Saludos',
+    fr: 'Bonjour'
   };
 
   // Log Messages
   let logMessages = {
     en: 'Logged in',
-    es: 'Inicio session'
+    es: 'Inicio session',
+    fr: 'Connecte'
   };
 
   // Greetr Prototype
@@ -90,7 +93,7 @@
         throw 'jQuery not loaded';
       }
 
-      if (selector) {
+      if (!selector) {
         throw 'Missing jQuery selector';
       }
 
